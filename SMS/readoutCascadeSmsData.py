@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import numpy as np
 import sigpy
 def readoutCascadeSmsData(kspace_data,factor):
