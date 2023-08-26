@@ -34,4 +34,4 @@ This project is distributed under the LICENSE provided in the License file.
 
 The project currently only makes a preliminary sorting, welcome to contribute to the project. Play with the existing code, find bugs and improvements as you go, and then submit your Pull Request.
 
-Thanks to fastMRI, Direct, pygrappa, and Bart for their great tools
+Thanks to fastMRI, Direct, pygrappa, and Bart for their great tools.
