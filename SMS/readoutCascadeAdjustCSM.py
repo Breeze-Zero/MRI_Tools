@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import numpy as np
 import sigpy
 def readoutCascadeAdjustCSM(CSM_xyzc, CAIPI_pattern):
