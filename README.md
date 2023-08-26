@@ -8,7 +8,7 @@ MRI_Tools is a basic toolkit for MRI data processing and reconstruction, which p
 
 1. **CS (Compressed Sensing)**: provides ` bart ` compression perception reconstruction method, and comes with a compression perception model based on deep learning ` CSANet `.
 2. **CoilCombine**: It is used to compress multi-coil data and simulate single-coil data.
-3. **Denoise **: Contains MRI data denoising methods based on `Noise2Noise` strategy, mainly applied to `M4Raw`dataset.
+3. **Denoise**: Contains MRI data denoising methods based on `Noise2Noise` strategy, mainly applied to `M4Raw`dataset.
 4. **PI (Parallel Imaging)**: Contains multiple parallel imaging methods and models such as `GRAPPA`, `MoDL`, `RAKI`, and `VarNet`.
 5. **SME (Sensitivity Map Estimation)**: Provides `ESPIRIT` and Neural Network methods for coil sensitivity estimation
 6. **SMS (Simultaneous Multi-Slice imaging)**: A range of tools for processing and reconstructing SMS data. Mainly, the `fastMRI `data are simulated into SMS data.
