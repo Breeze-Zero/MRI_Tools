@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import torch
 import pytorch_lightning
 from pytorch_lightning import LightningDataModule, LightningModule, Trainer
