@@ -209,7 +209,7 @@ class MFMC_cascade_model(nn.Module):
 
     def __init__(
         self,
-        model
+        model,
         sens_chans: int = 8,
         sens_pools: int = 4,
         num_cascades: int = 12,
