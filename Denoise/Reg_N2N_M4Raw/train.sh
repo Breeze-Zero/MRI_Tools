@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python train.py --model_name NAFNet_lr0.001 --use_pretrain False --train_batchsize 8 --gpu_num 1 --num_workers 4 --warmup_epoch 10 --lr 0.001 --num_epochs 100 --val_interval 5 --val_batchsize 4 --find_unused_parameters True --path_root '/data0/M4RawV1.5'
