@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import numpy as np
 from numpy import pi, e
 
