@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import torch
 import h5py
 import numpy as np
