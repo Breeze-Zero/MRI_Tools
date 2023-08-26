@@ -1,3 +1,7 @@
+'''
+MIT License
+Copyright (c) 2023 Breeze.
+'''
 import torch
 import fastmri
 import torch.nn as nn
