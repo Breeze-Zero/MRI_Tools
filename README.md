@@ -24,7 +24,7 @@ Each module has a specific Python file or Jupyter notebook, shows how to use the
 
 ### **Dependency**
 
-The toolkit USES many fastMRI, Direct, pygrappa and Bart's function. When using Bart related functions need to import the Bart path.
+The toolkit uses many fastMRI, Direct, pygrappa and Bart's functions. When using Bart related functions need to import the Bart path.
 
 ### LICENSE
 
