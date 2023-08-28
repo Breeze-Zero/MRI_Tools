@@ -1,0 +1,1 @@
+Lifeng Mei, Celia.M. Dong, Mengye Lyu*, et al: VarNet-based Simultaneous Multislice Reconstruction for Low Noise Amplification and Flexible Calibration. 2023 Proceedings of International Society for Magnetic Resonance in Medicine. (ISMRM 2023)
