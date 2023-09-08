@@ -5,7 +5,7 @@ fastmri>=0.2.0
 h5py==3.6.0
 mat73==0.59
 matplotlib==3.6.2
-numpy>=1.23.5
+numpy==1.20
 opencv_python>=4.5.5.64
 pyFFTW==0.13.0
 pytorch_lightning==1.6.5
