@@ -15,12 +15,12 @@ def RAKI(kspace_zf,acs_size,device='cuda:0'):
     pdy = (kspace_zf.shape[2]-acs_size[1])//2
     acs = kspace_zf[:, pdx:pdx+acs_size[0],pdy:pdy+acs_size[1]].copy()
 
-    acq = np.where(kspace_zf[0,:,0]!=0)[0] # get index of first non-zero sample
-    kspace_zf = kspace_zf[:,acq[0]:,:] # the code does not allow for leading zeros 
+    acq = np.where(kspace_zf[0,0,:]!=0)[0] # get index of first non-zero sample
+    kspace_zf = kspace_zf[:,:,acq[0]:] # the code does not allow for leading zeros 
     (nC, nP, nR) = kspace_zf.shape # (coils, number phase encoding lines, number read out lines)
 
     R = acq[1] - acq[0]
-    assert R==MB_factor
+
 
     layer_design_raki = {'num_hid_layer': 2, # number of hidden layers, in this case, its 2
                      'input_unit': nC, # number channels in input layer, nC is coil number 
