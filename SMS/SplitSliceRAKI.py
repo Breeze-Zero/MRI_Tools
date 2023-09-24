@@ -147,7 +147,7 @@ class SplitSliceRAKI(nn.Module):
         return CosineAnnealingLR(optimizer = self.optimizer,T_max = self.num_epochs)
 
     
-    def train(self,slice_index,channel_index):
+    def train_model(self,slice_index,channel_index):
         train_loader = torch.utils.data.DataLoader(self.build_split_slice_trainset(slice_index,channel_index),
                                                    batch_size=self.batch_size,shuffle=True,drop_last=False,
                                                    num_workers=0)
@@ -177,7 +177,7 @@ class SplitSliceRAKI(nn.Module):
                 self.optimizer = self.define_opt()
                 self.scheduler = self.define_lr_sched()
                 self.net.train()
-                self.train(slice,coil)
+                self.train_model(slice,coil)
                 self.net.eval()
                 with torch.no_grad():
                     output = self.net(self.kspace)[0].cpu()
