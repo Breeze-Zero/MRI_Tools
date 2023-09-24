@@ -22,7 +22,7 @@ def RAKI(kspace_zf,acs_size,R_dim = 1,device='cuda:0'):
     acq = np.where(kspace_zf[0,:,0]!=0)[0] # get index of first non-zero sample
     
     raki_output = kspace_zf.copy()
-    kspace_zf = kspace_zf[:,acq[0]:acq[-1]+1,:] # the code does not allow for leading zeros 
+    kspace_zf = kspace_zf[:,acq[0]:acq[-1],:] # the code does not allow for leading zeros 
     (nC, nP, nR) = kspace_zf.shape # (coils, number phase encoding lines, number read out lines)
 
     R = acq[1] - acq[0]
@@ -34,7 +34,7 @@ def RAKI(kspace_zf,acs_size,R_dim = 1,device='cuda:0'):
                         2:[128,(1,1)], # the second hidden layer has 128 channels, and a kernel size of (1,1) in PE- and RO-direction
                     'output_unit':[(R-1)*nC,(1,5)] # the output layer has (R-1)*nC channels, and a kernel size of (1,5) in PE- and RO-direction
                     }
-    raki_output[:,acq[0]:acq[-1]+1,:] = rakiReco(kspace_zf, acs, R, layer_design_raki,device)
+    raki_output[:,acq[0]:acq[-1],:] = rakiReco(kspace_zf, acs, R, layer_design_raki,device)
     
     
     raki_output = raki_output/10**(-1*int(scaling))
