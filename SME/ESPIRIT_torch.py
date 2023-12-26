@@ -228,7 +228,7 @@ class EspiritCalibration(torch.nn.Module):
 
         # Perform SVD on calibration matrix
         _, s, vh = torch.linalg.svd(calibration_matrix, full_matrices=False)
-        print(s.shape,vh.shape)
+        # print(s.shape,vh.shape)
         vh = vh[s > (self.threshold * s.max()), :]
 
         # Get kernels
