@@ -18,8 +18,13 @@ def RAKI(kspace_zf,acs_size,R_dim = 1,device='cuda:0'):
     pdx = (kspace_zf.shape[1]-acs_size[0])//2
     pdy = (kspace_zf.shape[2]-acs_size[1])//2
     acs = kspace_zf[:, pdx:pdx+acs_size[0],pdy:pdy+acs_size[1]].copy()
-
-    acq = np.where(kspace_zf[0,:,0]!=0)[0] # get index of first non-zero sample
+    
+    acq = np.array([])
+    i=0
+    while acq.size==0:
+        acq = np.where(kspace_zf[0,:,i]!=0)[0] # get index of first non-zero sample
+        i+=1
+    # acq = np.where(kspace_zf[0,:,0]!=0)[0] # get index of first non-zero sample
     
     raki_output = kspace_zf.copy()
     kspace_zf = kspace_zf[:,acq[0]:acq[-1],:] # the code does not allow for leading zeros 
